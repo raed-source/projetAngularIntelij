@@ -1,0 +1,14 @@
+<mat-card class="example-card" appearance="outlined">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>{{ snap.title }} Inu</mat-card-title>
+    <mat-card-subtitle>{{ snap.subTitle }}</mat-card-subtitle>
+  </mat-card-header>
+ <!-- "https://material.angular.io/assets/img/examples/shiba2.jpg" -->
+
+  <mat-card-actions>
+    <!--<p><button mat-button (click)="like()">LIKE</button> <span>{{snap.snaps}}</span></p>
+    <button mat-button (click)="unlike()">SHARE</button>-->
+    <button mat-button (click)="toSeeSnap()">afficher</button>
+  </mat-card-actions>
+</mat-card>

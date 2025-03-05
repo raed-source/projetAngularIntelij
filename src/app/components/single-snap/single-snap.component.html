@@ -1,0 +1,21 @@
+<mat-card class="example-card" appearance="outlined">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <button mat-button (click)="goToSnap()">retour</button>
+    <mat-card-title>{{ snap.title }} Inu</mat-card-title>
+    <mat-card-subtitle>{{ snap.subTitle }}</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image [src]="snap.imageUrl" alt="Photo of a Shiba Inu">
+  <!-- "https://material.angular.io/assets/img/examples/shiba2.jpg" -->
+  <mat-card-content>
+    <p>{{snap.description}}</p>
+    <p>{{snap.createdAt}}</p>
+    <p>{{snap.id}}</p>
+  </mat-card-content>
+  <mat-card-actions>
+   <!-- <p><button mat-button (click)="like()">LIKE</button> <span>{{snap.snaps}}</span></p>
+    <button mat-button (click)="unlike()">SHARE</button>-->
+
+    <button mat-button (click)="onSnap()">{{ snapButtonText }}</button>
+  </mat-card-actions>
+</mat-card>
