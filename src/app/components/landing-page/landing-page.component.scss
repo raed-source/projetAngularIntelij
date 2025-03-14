@@ -11,3 +11,6 @@
   width: 100%;
   text-align: center;
 }
+.example-container mat-form-field + mat-form-field {
+  margin-left: 8px;
+}

@@ -1,0 +1,9 @@
+.container {
+  display: flex;
+  gap: 30px;
+  flex-direction: column;
+  justify-content: center; /* Centre horizontalement */
+  align-items: center; /* Centre verticalement */
+  height: 100vh; /* Prend toute la hauteur de l'écran */
+}
+

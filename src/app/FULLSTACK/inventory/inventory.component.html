@@ -1,0 +1,75 @@
+<div class="mx-3 my-2">
+<h1>Inventory</h1>
+</div>
+<div class=" row mx-3">
+
+<form class="row gx-3 gy-2 align-items-center" (ngSubmit)="onSubmit()">
+  <div class="row">
+    <div class="col-sm-3">
+      <label for="Product id" class="form-label">Product id</label>
+    </div>
+    <div class="col-sm-3">
+      <label  class="form-label">Product name</label>
+    </div>
+    <div class="col-sm-3">
+      <label  class="form-label">Quantity available</label>
+    </div>
+    <div class="col-sm-3">
+      <label  class="form-label">Reorder point</label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-3">
+      <label class="visually-hidden" for="specificSizeInputId">Product id</label>
+      <input type="text" class="form-control" id="specificSizeInputId" aria-describedby="" [(ngModel)]="inventory.productId" name="productId">
+    </div>
+    <div class="col-sm-3">
+      <label class="visually-hidden" for="specificSizeInputSelect">Product name</label>
+      <select class="form-select" aria-label="Default select example" id="specificSizeInputSelect" [(ngModel)]="inventory.ProductName" name="productName" >
+        <option selected>Chose...</option>
+        <option value="one">One</option>
+        <option value="two">Two</option>
+        <option value="three">Three</option>
+      </select>
+    </div>
+    <div class="col-sm-3">
+      <label class="visually-hidden" for="specificSizeInputQuant">Quantity available</label>
+      <input type="text" class="form-control" id="specificSizeInputQuant" aria-describedby="" [(ngModel)]="inventory.ProductQuantity" name="ProductQuantity">
+    </div>
+    <div class="col-sm-3">
+      <label class="visually-hidden" for="specificSizeInputAction" >Reorder point</label>
+      <input type="text" class="form-control" id="specificSizeInputAction" aria-describedby="" [(ngModel)]="inventory.reorderPoint" name="productReorderPoint">
+    </div>
+  </div>
+  <div class="col-auto">
+    <button type="submit" class="btn btn-primary mb-3">Confirm</button>
+  </div>
+</form>
+  <div class="mx-3 my-2">
+    <h2>Inventory details</h2>
+  </div>
+  <table class="table">
+    <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Product</th>
+      <th scope="col">Stock available</th>
+      <th scope="col">Reorder point</th>
+      <th scope="col">Action</th>
+    </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let inventory of inventories">
+        <th scope="row">{{inventory.productId}}</th>
+        <td>{{inventory.productName}}</td>
+        <td>{{inventory.productQuantity}}</td>
+        <td>{{inventory.reorderPoint}}</td>
+        <td>
+          <button type="button" class="btn btn-primary">Edit</button>
+          <button type="button" class="btn btn-danger mx-2" (click)="openConfirmDialog()" >Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+

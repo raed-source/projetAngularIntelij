@@ -1,7 +1,7 @@
 import {ChangeDetectionStrategy, Component, Input, OnInit} from '@angular/core';
 import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
-import {Snap} from '../../models/snap_M';
+import {Snap} from '../../MODELS/snap_M';
 import {Router} from '@angular/router';
 import {SnapService} from '../../services/snap.service';
 
@@ -21,9 +21,6 @@ export class SnapComponent implements OnInit {
   ngOnInit():void{
 
   }
-
-
-
 
   toSeeSnap() {
     this.router.navigateByUrl(`snap/${this.snap.id}`);

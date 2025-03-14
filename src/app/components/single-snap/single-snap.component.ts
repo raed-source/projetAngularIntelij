@@ -10,7 +10,7 @@ import {
 } from '@angular/material/card';
 import {ActivatedRoute, Router, Routes} from '@angular/router';
 import {SnapService} from '../../services/snap.service';
-import {Snap} from '../../models/snap_M';
+import {Snap} from '../../MODELS/snap_M';
 
 @Component({
   selector: 'app-single-snap',

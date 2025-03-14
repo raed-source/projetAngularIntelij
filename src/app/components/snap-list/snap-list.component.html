@@ -1,3 +1,6 @@
-@for(mySnap of mySnaps;track mySnap.id){
-  <app-snap [snap]="mySnap"></app-snap>
-}
+<div class="container">
+  @for(mySnap of mySnaps; track mySnap.id) {
+    <app-snap [snap]="mySnap"></app-snap>
+  }
+</div>
+

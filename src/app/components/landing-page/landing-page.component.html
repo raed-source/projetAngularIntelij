@@ -1,7 +1,24 @@
 <div class="landing-block">
-  <img src="/assets/berlin.jpg" alt="Snap logo">
+  <div class="example-container">
+    <mat-form-field>
+      <mat-label>Enter your email pour inscrire au news letter</mat-label>
+      <input
+        matInput
+        placeholder="pat@example.com"
+        [formControl]="email"
+        (blur)="updateErrorMessage()"
+        required
+        type="email"
+        id="emailInput"
+      />
+      @if (email.invalid) {
+        <mat-error>{{errorMessage()}}</mat-error>
+      }
+    </mat-form-field>
+    <button type="submit" >Ok</button>
+  </div>
   <div class="landing-links">
+    <img src="/assets/berlin.jpg" alt="Snap logo">
     <button (click)="goToSnap()">Continuer vers Snapface</button>
-
   </div>
 </div>

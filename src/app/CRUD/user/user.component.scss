@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+  gap: 30px;
+  flex-direction: column;
+  justify-content: center; /* Centre horizontalement */
+  align-items: center; /* Centre verticalement */
+  height: 100vh; /* Prend toute la hauteur de l'écran */
+}
+example-card {
+  max-width: 400px;
+}
+mat-card-header {
+  margin-bottom: 20px; /* Ajuste la valeur selon tes besoins */
+}
+form {
+  display: flex;
+  flex-direction: column;
+  /*align-items: flex-start;*/
+}
+button{
+  margin: 10px;
+}
+img{
+  max-width: 50%;
+}

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {Snap} from '../models/snap_M';
+import {Snap} from '../MODELS/snap_M';
 import {SnapType} from '../types/snap-type';
 
 @Injectable({
